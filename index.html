@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meeting Buzzwords Tracker">
+    <title>Meeting Buzzwords</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Meeting Buzzwords</h1>
+    </header>
+    <main class="card">
+        <h2>Welcome to the Meeting Buzzwords Tracker!</h2>
+        <p>Because meetings aren't complete without meaningless jargon.</p>
+        <input type="text" id="buzzwordInput" placeholder="Enter a buzzword">
+        <label for="buzzwordInput">
+            <button id="addBuzzwordButton" onclick="addBuzzword()">Add Buzzword</button>
+        </label>
+        
+        <ul id="buzzwordList">
+            <!-- Buzzwords will be added here dynamically -->
+        </ul>
+        <button id="clearBuzzwordsButton" onclick="clearBuzzwords()">Clear Buzzwords</button>
+        <button id="meetingSummaryButton" onclick="generateMeetingSummary()">End Meeting</button>
+    </main>
+    <div id="summaryContainer" style="display:none;" class="card">
+        <h2>Meeting Summary</h2>
+        <p>Here are the top three buzzwords that made everyone nod in agreement without understanding a thing.</p>
+        <ol id="meetingSummaryList">
+            <!-- Top 3 Buzzwords will be displayed here via the meetingSummary function -->
+        </ol>
+    </div>
+    <footer>
+        <p>&copy; 2023 Meeting Buzzwords</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
